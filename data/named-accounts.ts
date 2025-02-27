@@ -283,7 +283,6 @@ export const NamedAccounts = {
         ...getAddress(base, 'ledger://0x0f28D58c00F9373C00811E9576eE803B4eF98abe'),
         ...getAddress(arbitrum, 'ledger://0x0f28D58c00F9373C00811E9576eE803B4eF98abe'),
         ...getAddress(mantle, 'ledger://0x5bEBA4D3533a963Dedb270a95ae5f7752fA0Fe22'),
-        ...getAddress(berachain, '0xe01EA58F6DA98488E4C92fD9b3E49607639C5370'),
         default: 0
     },
     deployerV2: { ...getAddress(mainnet, '0xdfeE8DC240c6CadC2c7f7f9c257c259914dEa84E') },
