@@ -18,14 +18,16 @@ const func: DeployFunction = async ({ getNamedAccounts }: HardhatRuntimeEnvironm
     const { deployer, targetToken, finalTargetToken, transferAddress } = await getNamedAccounts();
     const carbonController = await DeployedContracts.CarbonController.deployed();
 
-    await deployProxy({
-        name: InstanceName.CarbonVortex,
-        from: deployer,
-        args: [carbonController.address, ZERO_ADDRESS, targetToken, finalTargetToken],
-        proxy: {
+    await deployProxy(
+        {
+            name: InstanceName.CarbonVortex,
+            from: deployer,
+            args: [carbonController.address, ZERO_ADDRESS, targetToken, finalTargetToken]
+        },
+        {
             args: [transferAddress]
         }
-    });
+    );
 
     const carbonVortex = await DeployedContracts.CarbonVortex.deployed();
 
