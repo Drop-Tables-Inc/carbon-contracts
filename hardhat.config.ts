@@ -492,6 +492,18 @@ const config: HardhatUserConfig = {
                 }
             }
         },
+        [DeploymentNetwork.Coti]: {
+            chainId: chainIds[DeploymentNetwork.Coti],
+            url: rpcUrls[DeploymentNetwork.Coti],
+            saveDeployments: true,
+            live: true,
+            deploy: [`deploy/scripts/${DeploymentNetwork.Coti}`],
+            verify: {
+                etherscan: {
+                    apiKey: VERIFY_API_KEY
+                }
+            }
+        },
         [DeploymentNetwork.Sepolia]: {
             chainId: chainIds[DeploymentNetwork.Sepolia],
             url: rpcUrls[DeploymentNetwork.Sepolia],

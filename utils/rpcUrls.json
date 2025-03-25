@@ -32,5 +32,6 @@
     "aurora": "https://mainnet.aurora.dev",
     "sei": "https://evm-rpc.sei-apis.com",
     "iota": "https://iota-mainnet-evm.public.blastapi.io",
-    "berachain": "https://rpc.berachain.com/"
+    "berachain": "https://rpc.berachain.com/",
+    "coti": "https://mainnet.coti.io/rpc"
 }
