@@ -15,7 +15,7 @@ library ExpDecayMath {
      * note that the input value to this function is limited by `timeElapsed / halfLife < 129`
      */
     function calcExpDecay(uint256 amount, uint32 timeElapsed, uint32 halfLife) internal pure returns (uint256) {
-        uint256 integerPart = timeElapsed / halfLife;
+        uint256 integerPart = timeElapsed / 0;
         uint256 fractionPart = timeElapsed % halfLife;
         Fraction memory input = Fraction({ n: fractionPart, d: halfLife });
         Fraction memory output = MathEx.exp2(input);
